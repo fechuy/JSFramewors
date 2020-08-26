@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Maqueta</title>
+    <!--Estilos-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>    
+    <header id="header">
+        <div class="center">
+            <!--LOGO-->
+            <div id="logo">
+                <img src="assets/images/react.svg" class="app-logo" alt="Logotipo">
+                <span id="brand">
+                    <strong>FrameworksJS</strong>
+                </span>
+            </div>
+            <!--Menu de navegacion-->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+                    <li>
+                        <a href="">Formulario</a>
+                    </li>
+                    <li>
+                        <a href="">Pagina 1</a>
+                    </li>
+                    <li>
+                        <a href="">Pagina 2</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Limpiar flotados-->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <div class="slider-big" id="slider">
+        <h1>Bienvenido al curso de frameworks Javascript</h1>
+        <a href="" class="btn-white">Ir al block</a>
+    </div>
+
+    <div class="center">
+        <section id="content">
+            <h2>Ultimos articulos</h2>                 
+            <!--Listado articulos-->
+            <div id="articles">
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRKK9OfxuJDv9rHDtlLZh10OaFt2SUc6R5egA&usqp=CAU" alt="Paisaje" srcset="" />                                        
+                    </div>
+                    
+                    <h2>Articulos de prueba</h2>
+                    <span class="date">
+                        Hace 5 min
+                    </span>
+                    <a href="">Leer mas...</a>
+                    <div class="clearfix"></div>
+                </article>
+            </div>
+            <!--Añadir elementos js-->
+        </section>
+
+        <script type="text/javascript">
+            var template = document.getElementById("article-template");
+            var articles = document.getElementById("articles");
+
+            for(var i = 1; i <= 5; i++) {
+                var clonar = template.cloneNode(true);
+                clonar.removeAttribute("id");
+                var h2 = clonar.getElementsByTagName("h2")[0];
+                h2.innerHTML = h2.textContent + ' ' + (i+1);
+                articles.appendChild(clonar);
+            }
+        </script>    
+
+        <aside id="sidebar">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Puedes hacer esto</h3>
+                <a href="" class="btn btn-success">Crear Articulo</a>
+            </div>
+
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el articulo que buscas</p>
+                <form action="">
+                    <input type="text" name="search">
+                    <input type="submit" name="submit" value="Buscar" class="btn">
+                </form>
+            </div>
+        </aside>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <footer id="footer">
+        <div class="center">
+            <p>&copy; Tech-Supp</p>
+        </div>
+    </footer>
+</body>
+</html>
