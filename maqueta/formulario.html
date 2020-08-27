@@ -42,44 +42,32 @@
         </div>
     </header>
 
-    <div class="slider-big" id="slider">
-        <h1>Bienvenido al curso de frameworks Javascript</h1>
-        <a href="" class="btn-white">Ir al block</a>
-    </div>
-
     <div class="center">
         <section id="content">
-            <h2>Ultimos articulos</h2>                 
-            <!--Listado articulos-->
-            <div id="articles">
-                <article class="article-item" id="article-template">
-                    <div class="image-wrap">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRKK9OfxuJDv9rHDtlLZh10OaFt2SUc6R5egA&usqp=CAU" alt="Paisaje" srcset="" />                                        
-                    </div>
-                    
-                    <h2>Articulos de prueba</h2>
-                    <span class="date">
-                        Hace 5 min
-                    </span>
-                    <a href="">Leer mas...</a>
-                    <div class="clearfix"></div>
-                </article>
-            </div>
-            <!--Añadir elementos js-->
+            
+            <h1 class="subheader">Formulario</h1>
+            <form action="" class="mid-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre </label><input type="text" name="nombre" id="">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido </label><input type="text" name="apellido" id="">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Biografia </label><textarea name="bio" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group radiobuttons">
+                    <label for="hombre"><input type="radio" name="genero" id="" value="h">Hombre</label>
+                    <label for="mujer"><input type="radio" name="genero" id="" value="m">Mujer</label>
+                    <label for="mujer"><input type="radio" name="genero" id="" value="o">Otro</label>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                    <input type="submit" value="Aceptar" class="btn btn-success">
+                </div>
+            </form>
+
         </section>
-
-        <script type="text/javascript">
-            var template = document.getElementById("article-template");
-            var articles = document.getElementById("articles");
-
-            for(var i = 1; i <= 5; i++) {
-                var clonar = template.cloneNode(true);
-                clonar.removeAttribute("id");
-                var h2 = clonar.getElementsByTagName("h2")[0];
-                h2.innerHTML = h2.textContent + ' ' + (i+1);
-                articles.appendChild(clonar);
-            }
-        </script>    
 
         <aside id="sidebar">
             <div id="nav-blog" class="sidebar-item">

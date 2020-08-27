@@ -42,44 +42,38 @@
         </div>
     </header>
 
-    <div class="slider-big" id="slider">
-        <h1>Bienvenido al curso de frameworks Javascript</h1>
-        <a href="" class="btn-white">Ir al block</a>
-    </div>
-
     <div class="center">
         <section id="content">
             <h2>Ultimos articulos</h2>                 
             <!--Listado articulos-->
             <div id="articles">
-                <article class="article-item" id="article-template">
+                <article class="article-item article-detail" >
                     <div class="image-wrap">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRKK9OfxuJDv9rHDtlLZh10OaFt2SUc6R5egA&usqp=CAU" alt="Paisaje" srcset="" />                                        
                     </div>
                     
-                    <h2>Articulos de prueba</h2>
+                    <h1 class="subheader">Articulos de prueba</h1>
                     <span class="date">
                         Hace 5 min
                     </span>
-                    <a href="">Leer mas...</a>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil odio in illum quidem voluptatem error omnis est similique assumenda officiis quis doloremque eum doloribus, iure laudantium minus. Sunt, consequuntur maiores.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae similique repudiandae quaerat cupiditate veniam, voluptates ab perspiciatis hic, laborum officiis enim officia consectetur illo! Totam sunt unde cupiditate dolore perspiciatis?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat unde laborum voluptas magni aliquam incidunt minus aliquid at nam reiciendis. Non rerum incidunt esse corrupti! Assumenda eos et commodi quia!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum voluptatibus sunt repellendus exercitationem quibusdam similique dicta nisi soluta possimus corrupti rerum neque obcaecati, sequi ullam itaque accusantium, nostrum ex. Saepe?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, doloribus tempora reiciendis ipsa molestiae voluptatem fugit. Repellat ut voluptas, repudiandae exercitationem consequuntur laboriosam quos dolor quo voluptatibus iste ipsa soluta?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo neque pariatur ex expedita porro beatae dolor maxime magni amet rerum consequatur corrupti, animi eveniet dolores quasi libero perspiciatis totam ipsum.
+                    </p>    
+                    
                     <div class="clearfix"></div>
                 </article>
             </div>
             <!--Añadir elementos js-->
         </section>
-
-        <script type="text/javascript">
-            var template = document.getElementById("article-template");
-            var articles = document.getElementById("articles");
-
-            for(var i = 1; i <= 5; i++) {
-                var clonar = template.cloneNode(true);
-                clonar.removeAttribute("id");
-                var h2 = clonar.getElementsByTagName("h2")[0];
-                h2.innerHTML = h2.textContent + ' ' + (i+1);
-                articles.appendChild(clonar);
-            }
-        </script>    
 
         <aside id="sidebar">
             <div id="nav-blog" class="sidebar-item">
