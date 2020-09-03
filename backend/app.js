@@ -11,7 +11,7 @@ var app = express()
 
 //cargar ficheros rutas
 
-
+var articleRoutes = require('./routes/article')
 
 //middlewares
 
@@ -20,16 +20,18 @@ app.use(bodyParser.json());
 
 //CORS
 
-//Añadir prefijos a rutas
+//Añadir prefijos a rutas / cargar rutas
 
-app.get('/test', (req, res) => {
+app.use('/api/', articleRoutes);
+
+/*app.get('/test', (req, res) => {
     console.log("Hola mundo")
     return res.status(200).send({
         curso: "Frameworks JS",
         autor: "Felipe Santana",
         url: "techsupp.ddns.net"
     });
-});
+});*/
 
 //exportar modulo
 
