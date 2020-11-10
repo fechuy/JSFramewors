@@ -63,6 +63,32 @@ var controller = {
                 message:'Los datos no son validos.'
             });
         }
+    },
+
+    getArticles: (req, res) => {
+        //find
+        Article.find({}).sort('-_id').exec((err, articles) => {
+            
+            if(err){
+                return res.status(500).send({
+                    status: 'error',
+                    message: 'error al devolver los articulos'
+                });    
+            }
+
+            if(!articles){
+                return res.status(404).send({
+                    status: 'warning',
+                    message: 'No hay articulos para mostrar'
+                });    
+            }
+            
+            return res.status(200).send({
+                status: 'success',
+                articles
+            });
+        })
+        
     }
 };
 //end controller
